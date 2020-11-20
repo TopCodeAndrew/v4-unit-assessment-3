@@ -1,14 +1,24 @@
-import React from 'react'
+import React from 'react';
+import EachShelf from './EachShelf'
 
 export default function Shelf(props) {
 
+    let mappedTitles = props.shelf.map((el, index, arr) => {
+        let keyName = el.index
+        return (
+            < EachShelf
+                key={keyName}
+                element={el}
+                index={index} />
+        )
+    });
+
     return (
-        let mappedTitles = props.shelf.map()
-            < div className = "shelf" >
+        <div className="shelf" >
             <h3>Your Shelf</h3>
             <button>clear shelf</button>
-            <p>BOOK TITLES HERE</p>
-        </ >
+            <div>{mappedTitles}</div>
+        </div>
     )
 
 }

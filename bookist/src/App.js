@@ -31,7 +31,7 @@ class App extends Component {
     };
     this.setState({
       books: [filteredBooks],
-      shelf: []
+      shelf: [],
     });
   }
 
@@ -47,7 +47,6 @@ class App extends Component {
     this.setState({
       shelf: [...this.state.shelf, element]
     });
-
   }
 
 

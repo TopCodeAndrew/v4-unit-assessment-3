@@ -3,7 +3,7 @@ import React from 'react'
 export default function EachBook(props) {
     return (
         <div
-            key={props.element.index}
+            key={props.element.id}
             className="individual-books">
             <img
                 onClick={() => props.addToShelf(props.element.title)}
