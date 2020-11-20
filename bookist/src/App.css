@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  width: 100vw;
   background-color: rgb(238, 238, 238);
   display: flex;
   flex-direction: column;
@@ -31,7 +32,7 @@
 }
 
 .body{
-  width: 95vw;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
 }
@@ -41,21 +42,17 @@
   width: 75%;
   display: flex;
   justify-content: space-around;
-  background-color: #77b7ab;
+  background-color: rgb(214, 43, 43);
   box-sizing: border-box;
+  flex-wrap: wrap;
+  border-right: solid black 2px;
 }
 
-.mapped-books{
-  background-color: rgb(238, 238, 238);
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  border-right: solid black 2px  
-}
 
 .individual-books{
   width: 170px;
   margin: 35px;
+  background-color: chartreuse;
 }
 
 .image{

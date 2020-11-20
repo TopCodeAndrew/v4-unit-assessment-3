@@ -15,7 +15,7 @@ class App extends Component {
       shelf: []
     }
 
-    // this.addToShelf = this.addToShelf.bind(this)
+    this.addToShelf = this.addToShelf.bind(this)
     this.filterBooks = this.filterBooks.bind(this)
     this.reset = this.reset.bind(this)
   }
@@ -30,7 +30,8 @@ class App extends Component {
       }
     };
     this.setState({
-      books: [filteredBooks]
+      books: [filteredBooks],
+      shelf: []
     });
   }
 
@@ -39,6 +40,14 @@ class App extends Component {
     this.setState({
       books: books
     })
+  }
+
+
+  addToShelf(element) {
+    this.setState({
+      shelf: [...this.state.shelf, element]
+    });
+
   }
 
 
@@ -51,7 +60,7 @@ class App extends Component {
           reset={this.reset} />
         <div className="body">
           <BookList addToShelf={this.addToShelf} books={this.state.books} />
-          <Shelf />
+          <Shelf shelf={this.state.shelf} />
         </div>
       </div>
     );

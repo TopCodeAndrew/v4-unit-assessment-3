@@ -8,6 +8,7 @@ export default function BookList(props) {
                 key={el.id}
                 element={el}
                 index={index}
+                addToShelf={props.addToShelf}
             // I will probably need to add shelf props here later
             />
         )

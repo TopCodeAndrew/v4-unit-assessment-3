@@ -6,6 +6,7 @@ export default function EachBook(props) {
             key={props.element.index}
             className="individual-books">
             <img
+                onClick={() => props.addToShelf(props.element.title)}
                 className="image"
                 src={props.element.img}
                 alt="cover" />
