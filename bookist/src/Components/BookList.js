@@ -1,42 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
+import EachBook from './EachBook'
 
-export default class BookList extends Component {
-    constructor() {
-        super();
-
-        this.state = {}
-    }
-
-    handleClick() {
-
-    }
-
-
-
-
-
-    render() {
-        let mappedBooks = this.props.books.map((el, index) =>
-            <div
-                onClick={i => this.props.addToShelf}
-                key={index}
-                className="individual-books">
-
-                <img
-                    className="image"
-                    src={this.props.books[index].img}
-                    alt="cover" />
-
-                <h4>{el.title} by {el.author}</h4>
-
-            </div>)
-
-
-
+export default function BookList(props) {
+    let mappedBooks = props.books.map((el, index) => {
         return (
-            <div className="book-list" >
-                <span className="mapped-books">{mappedBooks}</span>
-            </div>
+            <EachBook
+                key={el.id}
+                element={el}
+                index={index}
+            // I will probably need to add shelf props here later
+            />
         )
-    }
+    });
+
+    return (
+        <div className="book-list">{mappedBooks}</div>
+    )
 }
+
+
+
+
+
+
+
+
+
+
+// <div
+//     key={index}
+//     className="individual-books">
+
+
+// </div>)
+
+
+
+// return (
+//     <div className="book-list" >
+//         <span className="mapped-books">{mappedBooks}</span>
+//     </div>
+// )
+
+
+
+
+
+
+

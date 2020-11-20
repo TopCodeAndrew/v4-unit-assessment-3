@@ -20,18 +20,16 @@ export default class SearchBar extends Component {
 
     }
 
-    handleClear()({
-        this.props.reset()
-    })
 
 
-render() {
-    return (
-        <div className="search-bar">
-            <input onChange={(e) => this.handleChange(e.target.value)} />
-            <button onClick={() => this.handleClick()} >search</button>
-            <button onClick>clear search</button>
-        </div>
-    )
-}
+
+    render() {
+        return (
+            <div className="search-bar">
+                <input onChange={(e) => this.handleChange(e.target.value)} />
+                <button onClick={() => this.handleClick()} >search</button>
+                <button onClick={this.props.reset}>clear search</button>
+            </div>
+        )
+    }
 }
