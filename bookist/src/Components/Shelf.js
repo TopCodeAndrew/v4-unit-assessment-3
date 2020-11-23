@@ -4,19 +4,18 @@ import EachShelf from './EachShelf'
 export default function Shelf(props) {
 
     let mappedTitles = props.shelf.map((el, index, arr) => {
-        let keyName = el.index
         return (
-            < EachShelf
-                key={keyName}
-                element={el}
-                index={index} />
+            <div
+                key={`${el} title`}
+                className="individual-titles"> {el}
+            </div>
         )
     });
 
     return (
         <div className="shelf" >
             <h3>Your Shelf</h3>
-            <button>clear shelf</button>
+            <button onClick={props.clearShelf}>clear shelf</button>
             <div>{mappedTitles}</div>
         </div>
     )

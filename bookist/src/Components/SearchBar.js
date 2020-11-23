@@ -16,8 +16,15 @@ export default class SearchBar extends Component {
     }
 
     handleClick() {
-        this.props.filterBooks(this.state.userInput)
+        this.props.filterBooks(this.state.userInput);
 
+    }
+
+    handleClear = () => {
+        this.props.reset();
+        this.setState({
+            userInput: '',
+        });
     }
 
 
@@ -28,7 +35,7 @@ export default class SearchBar extends Component {
             <div className="search-bar">
                 <input onChange={(e) => this.handleChange(e.target.value)} />
                 <button onClick={() => this.handleClick()} >search</button>
-                <button onClick={this.props.reset}>clear search</button>
+                <button value={this.state.userInput} onClick={this.handleClear}>clear search</button>
             </div>
         )
     }

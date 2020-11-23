@@ -4,13 +4,16 @@ import EachBook from './EachBook'
 export default function BookList(props) {
     let mappedBooks = props.books.map((el, index) => {
         return (
-            <EachBook
+            <div
                 key={el.id}
-                element={el}
-                index={index}
-                addToShelf={props.addToShelf}
-            // I will probably need to add shelf props here later
-            />
+                className="individual-books">
+                <img
+                    onClick={(e) => props.addToShelf(e.target.alt)}
+                    className="image"
+                    src={el.img}
+                    alt={el.title} />
+                <h4>{el.title} by {el.author}</h4>
+            </div>
         )
     });
 
