@@ -42,7 +42,7 @@
   width: 75%;
   display: flex;
   justify-content: space-around;
-  background-color: rgb(214, 43, 43);
+  background-color: rgb(238, 238, 238);
   box-sizing: border-box;
   flex-wrap: wrap;
   border-right: solid black 2px;
@@ -52,7 +52,7 @@
 .individual-books{
   width: 170px;
   margin: 35px;
-  background-color: chartreuse;
+  background-color: rgb(238, 238, 238);
 }
 
 .image{
@@ -67,6 +67,9 @@
   align-items: center;
 }
 
+.individual-titles {
+  margin-top: 20px;
+}
 
 
 

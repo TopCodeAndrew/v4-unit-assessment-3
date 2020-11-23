@@ -48,9 +48,14 @@ class App extends Component {
 
 
   addToShelf(title) {
-    this.setState({
-      shelf: [...this.state.shelf, title]
-    });
+    if (this.state.shelf.includes(title)) {
+      alert("You have already added this book to your shelf! :)")
+    } else {
+
+      this.setState({
+        shelf: [...this.state.shelf, title]
+      })
+    };
 
     console.log(this.state.shelf)
   }
