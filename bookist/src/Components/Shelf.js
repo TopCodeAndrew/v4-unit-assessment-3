@@ -1,5 +1,4 @@
 import React from 'react';
-import EachShelf from './EachShelf'
 
 export default function Shelf(props) {
 

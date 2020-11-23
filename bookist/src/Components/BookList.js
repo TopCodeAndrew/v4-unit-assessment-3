@@ -1,5 +1,4 @@
 import React from 'react';
-import EachBook from './EachBook'
 
 export default function BookList(props) {
     let mappedBooks = props.books.map((el, index) => {
